@@ -4,8 +4,10 @@ import { TextInput, Headline, Button, Paragraph, Dialog, Portal } from 'react-na
 import globalStyles from '../styles/global';
 import axios from 'axios';
 
-const NuevoCliente = () => {
+const NuevoCliente = ({navigation, route}) => {
 
+  const { setConsultarAPI } = route.params;
+  
   // Campos formularios
   const [ nombre, guardarNombre ] = useState('');
   const [ telefono, guardarTelefono ] = useState('');
@@ -20,7 +22,7 @@ const NuevoCliente = () => {
       guardarAlerta(true)
       return;
     }
-    console.log('Guardando...')
+    // console.log('Guardando...')
 
     // Generar el cliente
     const cliente = { nombre, telefono, empresa, correo };
@@ -38,10 +40,16 @@ const NuevoCliente = () => {
     }
     
     // Redireccionar
-
+    navigation.navigate('Inicio');
 
     // Limpiar el form (opcional)
+    guardarNombre('');
+    guardarTelefono('');
+    guardarCorreo('');
+    guardarEmpresa('');
 
+    // Cambiar a true para traernos el nuevo cliente
+    setConsultarAPI(true)
   }
 
   return (

@@ -1,14 +1,6 @@
 import 'react-native-gesture-handler';
-import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import React, { useEffect } from 'react';
+import { StyleSheet, Platform } from 'react-native';
 
 import Inicio from './views/Inicio';
 import NuevoCliente from './views/NuevoCliente';
@@ -36,6 +28,8 @@ const theme = {
 
 const App = () => {
 
+
+
   return (
     <>
       <PaperProvider>
@@ -57,13 +51,13 @@ const App = () => {
               component={Inicio}
               options={ ({navigation, route}) => ({
                 headerTitleAlign: 'center',
-                headerLeft: (props) => (
-                  <BarraSuperior 
-                    {...props}
-                    navigation={navigation}
-                    route={route}
-                  />
-                )
+                // headerLeft: (props) => 
+                //   <BarraSuperior 
+                //     {...props}
+                //     navigation={navigation}
+                //     route={route}
+                //   />
+                
               })}
             />
             <Stack.Screen

@@ -13,6 +13,27 @@
       "empresa": "empresa",
       "correo": "correo@correo.com",
       "id": 2
+    },
+    {
+      "nombre": "Candela Mi Negro",
+      "telefono": "65464654652",
+      "empresa": "Candela Empresa",
+      "correo": "correo@correo.com",
+      "id": 3
+    },
+    {
+      "nombre": "Todero",
+      "telefono": "456554564654",
+      "empresa": "klldkfñlkdsñlf",
+      "correo": "correo@correo.com",
+      "id": 4
+    },
+    {
+      "nombre": "sdlñfjlaskdjf",
+      "telefono": "646465465465",
+      "empresa": "jsdflkjdslfjlsdkfjldskf",
+      "correo": "correo@correo.com",
+      "id": 5
     }
   ]
 }
